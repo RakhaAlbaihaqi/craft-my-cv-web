@@ -139,13 +139,22 @@ function CvPage() {
         <Block title="Proyek & Riset">
           <div className="space-y-6">
             {projects.map((p) => (
-              <div key={p.title} className="print-page">
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="font-display text-lg">{p.title}</h3>
-                  <span className="font-mono text-[11px] text-muted-foreground">{p.kicker}</span>
+              <div key={p.title} className="print-page grid gap-4 sm:grid-cols-[10rem_1fr]">
+                <img
+                  src={p.image}
+                  alt={p.imageAlt}
+                  className="h-24 w-full rounded-sm border border-border object-cover object-top sm:h-20"
+                />
+                <div>
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="font-display text-lg">{p.title}</h3>
+                    <span className="font-mono text-[11px] text-muted-foreground">{p.kicker}</span>
+                  </div>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    {p.description}
+                  </p>
+                  <p className="mt-2 font-mono text-[11px] text-gold/80">{p.stack.join(" · ")}</p>
                 </div>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
-                <p className="mt-2 font-mono text-[11px] text-gold/80">{p.stack.join(" · ")}</p>
               </div>
             ))}
           </div>
