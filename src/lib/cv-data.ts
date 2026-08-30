@@ -18,7 +18,7 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "3", label: "Proyek & Riset" },
+  { value: "6", label: "Proyek & Riset" },
   { value: "3", label: "Pengalaman Kerja" },
   { value: "10", label: "Sertifikasi & Pelatihan" },
   { value: "2026", label: "Tahun Lulus" },
