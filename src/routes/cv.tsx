@@ -87,7 +87,7 @@ function CvPage() {
           <img
             src={photo.url}
             alt={`Foto ${profile.name}`}
-            className="h-32 w-26 rounded-sm border border-border object-cover"
+            className="h-32 w-[6.5rem] rounded-sm border border-border object-cover"
           />
         </header>
 
@@ -115,7 +115,9 @@ function CvPage() {
               <div key={e.org} className="print-page">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="font-display text-lg">{e.role}</h3>
-                  <span className="font-mono text-[11px] text-muted-foreground">{e.period}</span>
+                  {e.period && (
+                    <span className="font-mono text-[11px] text-muted-foreground">{e.period}</span>
+                  )}
                 </div>
                 <p className="text-sm text-gold/90">
                   {e.org} — {e.place}

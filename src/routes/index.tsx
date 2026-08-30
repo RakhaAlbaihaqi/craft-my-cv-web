@@ -228,7 +228,7 @@ function Home() {
                   <h3 className="mt-4 font-display text-2xl leading-tight">{e.org}</h3>
                   <p className="mt-1.5 text-sm text-muted-foreground">{e.role}</p>
                   <p className="mt-3 font-mono text-[11px] text-muted-foreground">
-                    {e.period} · {e.place}
+                    {[e.period, e.place].filter(Boolean).join(" · ")}
                   </p>
                 </div>
                 <div>

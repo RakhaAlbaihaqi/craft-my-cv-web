@@ -62,7 +62,7 @@ export const experiences = [
     tag: "Internal",
     org: "Rumah Sakit Umum",
     role: "Staf Entri Data & Pengembangan Web Internal",
-    period: "—",
+    period: "",
     place: "Indonesia",
     note: "Fokus digitalisasi sistem administrasi medis.",
     points: [
