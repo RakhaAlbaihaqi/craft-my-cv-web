@@ -86,6 +86,13 @@ export const education = {
   ],
 };
 
+import wbsImg from "@/assets/wbs-kppu.png.asset.json";
+import broilerImg from "@/assets/broilercount.png.asset.json";
+import warnaImg from "@/assets/deteksi-warna.png.asset.json";
+import dapurImg from "@/assets/dapur-bunda.png.asset.json";
+import beautyImg from "@/assets/beauty-verse.png.asset.json";
+import octomedImg from "@/assets/octomed.png.asset.json";
+
 export const projects = [
   {
     title: "Website WBS KPPU",
@@ -95,29 +102,70 @@ export const projects = [
       "Website pengaduan/pelaporan pelanggaran usaha yang dibangun dengan Python. Mengembangkan front-end dan back-end sekaligus mengintegrasikannya, lalu mendeploy wbs.kppu.go.id ke server Plesk.",
     stack: ["Python", "Front-End", "Back-End", "Plesk"],
     metrics: [{ value: "Live", label: "wbs.kppu.go.id" }],
+    image: wbsImg.url,
+    imageAlt: "Halaman utama Whistleblowing System KPPU",
+    link: "https://wbs.kppu.go.id",
   },
   {
-    title: "Penghitungan Populasi Ayam Broiler (YOLOv11)",
+    title: "BroilerCount — Penghitungan Populasi Ayam Broiler",
     kicker: "Skripsi · 2026",
-    subtitle: "Computer vision berbasis website",
+    subtitle: "Computer vision berbasis website (YOLOv11)",
     description:
-      "Sistem penghitungan populasi ayam broiler berbasis website mengikuti metodologi CRISP-DM, dari data understanding hingga deployment. Front-end Next.js, back-end FastAPI, dengan model deteksi objek YOLOv11 hasil pelatihan khusus untuk input video/gambar.",
+      "Sistem penghitungan populasi ayam broiler berbasis website mengikuti metodologi CRISP-DM, dari data understanding hingga deployment. Front-end Next.js, back-end FastAPI, dengan model deteksi objek YOLOv11 hasil pelatihan khusus untuk input gambar maupun kamera perangkat.",
     stack: ["Next.js", "FastAPI", "YOLOv11", "CRISP-DM"],
     metrics: [
       { value: "mAP@50", label: "Metrik evaluasi model" },
       { value: "SUS", label: "Uji usability website" },
     ],
+    image: broilerImg.url,
+    imageAlt: "Antarmuka BroilerCount dengan unggah foto dan kamera",
   },
   {
-    title: "Deteksi Warna dengan YOLOv8",
+    title: "Deteksi Warna Real-time (YOLOv8)",
     kicker: "Riset · 2025",
-    subtitle: "Computer vision real-time",
+    subtitle: "Computer vision real-time berbasis web",
     description:
-      "Sistem computer vision real-time berbasis YOLOv8 untuk mendeteksi dan mengklasifikasikan warna pada gambar/video. Mengelola pipeline machine learning menyeluruh: pengumpulan data, anotasi, pelatihan, validasi, hingga optimasi.",
-    stack: ["YOLOv8", "OpenCV", "Matplotlib", "Seaborn"],
+      "Aplikasi web yang mendeteksi dan mengklasifikasikan warna pada gambar maupun umpan kamera secara real-time menggunakan model YOLOv8 terlatih, dengan kontrol confidence dan IoU threshold. Menangani pipeline machine learning menyeluruh: pengumpulan data, anotasi, pelatihan, validasi, hingga optimasi.",
+    stack: ["YOLOv8", "OpenCV", "Streamlit", "Matplotlib"],
     metrics: [{ value: "67,5", label: "Skor System Usability Scale" }],
+    image: warnaImg.url,
+    imageAlt: "Antarmuka aplikasi deteksi warna real-time YOLOv8",
+  },
+  {
+    title: "Dapur Bunda Bahagia",
+    kicker: "Web Development",
+    subtitle: "Sistem pemesanan restoran online",
+    description:
+      "Website restoran yang memungkinkan pelanggan memesan makanan dan minuman langsung dari perangkat mereka tanpa harus mengantre di kasir. Menu digital, alur pemesanan yang ringkas, serta panel manajemen pesanan untuk staf dapur.",
+    stack: ["Web App", "Menu Digital", "Manajemen Pesanan"],
+    metrics: [{ value: "Self-order", label: "Tanpa antre kasir" }],
+    image: dapurImg.url,
+    imageAlt: "Halaman utama website restoran Dapur Bunda Bahagia",
+  },
+  {
+    title: "Beauty Verse",
+    kicker: "Web Development",
+    subtitle: "Profil & reservasi klinik kecantikan",
+    description:
+      "Website klinik kecantikan yang menampilkan katalog layanan perawatan unggulan sekaligus memfasilitasi pengaturan jadwal kunjungan. Tata letak bersih dan alur informasi yang runtut agar calon klien mudah memilih perawatan lalu memesan jadwal.",
+    stack: ["Web App", "Katalog Layanan", "Penjadwalan"],
+    metrics: [{ value: "Booking", label: "Jadwal perawatan" }],
+    image: beautyImg.url,
+    imageAlt: "Halaman utama website klinik kecantikan Beauty Verse",
+  },
+  {
+    title: "Octomed",
+    kicker: "UI/UX · Web App",
+    subtitle: "Reservasi medis & manajemen data klinik",
+    description:
+      "Sistem reservasi dokter online sekaligus pengelolaan data pasien untuk klinik. Perancangan difokuskan pada alur pengguna yang jelas, konsistensi antarmuka, dan aksesibilitas — mulai pencarian dokter dan obat hingga notifikasi serta layanan ambulans.",
+    stack: ["User Flow", "Design System", "Aksesibilitas"],
+    metrics: [{ value: "Pasien & Klinik", label: "Dua sisi pengguna" }],
+    image: octomedImg.url,
+    imageAlt: "Dasbor aplikasi Octomed untuk reservasi medis",
   },
 ];
+
 
 export const skillGroups = [
   {
