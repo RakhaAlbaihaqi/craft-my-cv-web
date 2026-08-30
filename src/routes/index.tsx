@@ -301,24 +301,40 @@ function Home() {
             title="Proyek & Riset Unggulan"
             lead="Dari sistem pelaporan nasional hingga model deteksi objek yang dilatih sendiri."
           />
-          <div className="mt-12 space-y-6">
+          <div className="mt-12 space-y-8">
             {projects.map((p, i) => (
               <article
                 key={p.title}
-                className="group grid gap-6 rounded-sm border border-border bg-background/40 p-8 transition-colors hover:border-gold/30 lg:grid-cols-[auto_1fr_auto] lg:items-start lg:gap-10"
+                className="group grid gap-8 rounded-sm border border-border bg-background/40 p-6 transition-colors hover:border-gold/30 sm:p-8 lg:grid-cols-2 lg:items-center lg:gap-10"
               >
-                <span className="font-display text-4xl text-gold/40">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <div
+                  className={`relative overflow-hidden rounded-sm border border-border bg-surface ${
+                    i % 2 === 1 ? "lg:order-2" : ""
+                  }`}
+                >
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt}
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-background/10 mix-blend-multiply" />
+                </div>
+
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gold">
-                    {p.kicker}
-                  </p>
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display text-3xl text-gold/40">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-gold">
+                      {p.kicker}
+                    </p>
+                  </div>
                   <h3 className="mt-2 font-display text-2xl leading-tight transition-colors group-hover:text-gold sm:text-3xl">
                     {p.title}
                   </h3>
                   <p className="mt-1 text-sm text-muted-foreground">{p.subtitle}</p>
-                  <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+                  <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
                     {p.description}
                   </p>
                   <div className="mt-5 flex flex-wrap gap-2">
@@ -331,20 +347,21 @@ function Home() {
                       </span>
                     ))}
                   </div>
-                </div>
-                <div className="space-y-4 lg:w-44 lg:border-l lg:border-border lg:pl-6">
-                  {p.metrics.map((m) => (
-                    <div key={m.label}>
-                      <p className="font-display text-2xl text-gold">{m.value}</p>
-                      <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-                        {m.label}
-                      </p>
-                    </div>
-                  ))}
+                  <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-5">
+                    {p.metrics.map((m) => (
+                      <div key={m.label}>
+                        <p className="font-display text-xl text-gold">{m.value}</p>
+                        <p className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+                          {m.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
           </div>
+
         </div>
       </section>
 
