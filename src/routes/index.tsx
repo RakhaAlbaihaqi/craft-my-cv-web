@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, Download, Mail, MapPin, Phone } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import cvPdf from "@/assets/cv.pdf.asset.json";
-import photo from "@/assets/rakha-photo.jpg.asset.json";
+import photo from "@/assets/foto_cv.JPG.asset.json";
 import {
   certificates,
   education,

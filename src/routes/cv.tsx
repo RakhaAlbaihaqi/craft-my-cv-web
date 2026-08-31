@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Download, Printer } from "lucide-react";
 import cvPdf from "@/assets/cv.pdf.asset.json";
-import photo from "@/assets/rakha-photo.jpg.asset.json";
+import photo from "@/assets/foto_cv.JPG.asset.json";
 import {
   certificates,
   education,
