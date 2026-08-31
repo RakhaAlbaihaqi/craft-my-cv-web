@@ -477,27 +477,35 @@ function Home() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-6 rounded-sm border border-gold/25 bg-gold/[0.04] p-8">
-          <div>
-            <h3 className="font-display text-2xl sm:text-3xl">Butuh CV lengkap saya?</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Lihat versi web yang rapi, atau unduh langsung sebagai PDF.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              to="/cv"
-              className="rounded-sm border border-border-strong px-6 py-3 font-mono text-[11px] uppercase tracking-[0.16em] transition-colors hover:bg-surface"
-            >
-              Lihat CV
-            </Link>
-            <a
-              href={cvPdf.url}
-              download="CV_Rakha_Albaihaqi_Yulianto.pdf"
-              className="inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              <Download className="size-3.5" /> Unduh PDF
-            </a>
+        <div className="mt-6 rounded-sm border border-gold/25 bg-gold/[0.04] p-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h3 className="font-display text-2xl sm:text-3xl">Ready to collaborate?</h3>
+              <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+                Terbuka untuk peluang baru, proyek freelance, atau diskusi ide. Hubungi saya langsung atau unduh CV lengkap di bawah.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 rounded-sm border border-border-strong px-6 py-3 font-mono text-[11px] uppercase tracking-[0.16em] transition-colors hover:bg-surface"
+              >
+                <Mail className="size-3.5" /> Kirim Email
+              </a>
+              <Link
+                to="/cv"
+                className="rounded-sm border border-border-strong px-6 py-3 font-mono text-[11px] uppercase tracking-[0.16em] transition-colors hover:bg-surface"
+              >
+                Lihat CV
+              </Link>
+              <a
+                href={cvPdf.url}
+                download="CV_Rakha_Albaihaqi_Yulianto.pdf"
+                className="inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                <Download className="size-3.5" /> Unduh PDF
+              </a>
+            </div>
           </div>
         </div>
       </section>
