@@ -86,12 +86,12 @@ export const education = {
   ],
 };
 
-import wbsImg from "@/assets/wbs-kppu.png.asset.json";
-import broilerImg from "@/assets/broilercount.png.asset.json";
-import warnaImg from "@/assets/deteksi-warna.png.asset.json";
-import dapurImg from "@/assets/dapur-bunda.png.asset.json";
-import beautyImg from "@/assets/beauty-verse.png.asset.json";
-import octomedImg from "@/assets/octomed.png.asset.json";
+const wbsImg = { url: "/images/wbs-kppu.png" };
+const broilerImg = { url: "/images/broilercount.png" };
+const warnaImg = { url: "/images/deteksi-warna.png" };
+const dapurImg = { url: "/images/dapur-bunda.png" };
+const beautyImg = { url: "/images/beauty-verse.png" };
+const octomedImg = { url: "/images/octomed.png" };
 
 export const projects = [
   {
